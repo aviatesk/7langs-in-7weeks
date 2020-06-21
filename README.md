@@ -16,3 +16,6 @@ My random thoughts on each language follows, but who reads it.
 
 - I agree with that Io is surely simple, but its coding style felt really frustrating to me, at least so far ...
 - DSLs in Io are fairly powerful, it's definitely possible by the fact that Io stays so simple that it can be implemented with less pre-defined tokens for the parser (consequently, Io has less syntax-sugar, which in turn felt unsatisfactory to me).
+
+
+### Scala
