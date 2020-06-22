@@ -3,6 +3,9 @@
 spin up Scala Jupyter kernel ([almond](https://almond.sh/)):
 - use 8888 port: `docker run --rm -p 8888:8888 -e JUPYTER_TOKEN=DockerJupyterAuthToken almondsh/almond:latest`
 - use whatever port: `docker run --rm -p 8000:8000 -e JUPYTER_TOKEN=DockerJupyterAuthToken almondsh/almond:latest jupyter notebook --no-browser --ip=0.0.0.0 --port=8000`
+- work in a container:
+  * `docker run -it --rm -p 8888:8888 -v "$PWD":/home/jovyan/work -e JUPYTER_TOKEN=DockerJupyterAuthToken almondsh/almond:latest bash`
+  * `jupyter nbconvert <notebook> --to html`
 
 
 ## notes
