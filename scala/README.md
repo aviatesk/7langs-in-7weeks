@@ -4,8 +4,11 @@ spin up Scala Jupyter kernel ([almond](https://almond.sh/)):
 - use 8888 port: `docker run --rm -p 8888:8888 -e JUPYTER_TOKEN=DockerJupyterAuthToken almondsh/almond:latest`
 - use whatever port: `docker run --rm -p 8000:8000 -e JUPYTER_TOKEN=DockerJupyterAuthToken almondsh/almond:latest jupyter notebook --no-browser --ip=0.0.0.0 --port=8000`
 - work in a container:
-  * `docker run -it --rm -p 8888:8888 -v "$PWD":/home/jovyan/work -e JUPYTER_TOKEN=DockerJupyterAuthToken almondsh/almond:latest bash`
+  * `docker run -it --rm -p 8888:8888 -v "$PWD":/root -e JUPYTER_TOKEN=DockerJupyterAuthToken almondsh/almond:latest bash`
   * `jupyter nbconvert <notebook> --to html`
+
+run `scala` (or `sbt`):
+- `docker run -it --rm -v "$PWD":/root hseeberger/scala-sbt:8u222_1.3.5_2.13.1`
 
 
 ## notes
@@ -32,3 +35,12 @@ mutable vs. immutable for concurrency:
   * (functional programming) eliminating mutable states !
 
 _caveat_: Scala is not a pure functional programming language, while it offers tools that allow developers to use functional abstractions where they make sense.
+
+TODO:
+closure vs. code block:
+
+other notable features
+- trait-based mixin
+- pattern matching
+- method overloading (even on optional spaces, periods and semicolons): great tool for developing DSL
+- XML-integration: important because the Java community is XML-heavy
